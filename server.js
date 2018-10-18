@@ -16,7 +16,13 @@ hbs.registerPartials(__dirname + '/views/parciales');
 app.set('view engine', 'hbs');
 
 
-app.get('/about', function(req, res) {
+app.get('/', (req, res) => {
+    res.render('home', {
+        nombre: 'diego puYol'
+    });
+});
+
+app.get('/about', (req, res) => {
     res.render('about');
 });
 
