@@ -8,7 +8,7 @@ require('./hbs/helpers');
 const port = process.env.PORT || 3000;
 
 //Middleware
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 app.use(Express.static(path.join(__dirname, '../public')));
 
 
