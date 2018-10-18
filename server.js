@@ -9,19 +9,15 @@ const port = process.env.PORT || 3000;
 
 //Middleware
 app.use(express.static(__dirname + '/public'));
+app.use(Express.static(path.join(__dirname, '../public')));
 
 
 // Expres HBS
 hbs.registerPartials(__dirname + '/views/parciales');
 app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        nombre: 'diego puYol'
-    });
-});
 
-app.get('/about', (req, res) => {
+app.get('/about', function(req, res) {
     res.render('about');
 });
 
